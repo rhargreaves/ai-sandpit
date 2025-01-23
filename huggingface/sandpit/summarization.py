@@ -1,11 +1,7 @@
 from transformers import pipeline
-from pprint import pprint
 
-summarizer = pipeline("summarization")
-while True:
-    text = input("Enter text: ")
-    summary = summarizer(text)
-    pprint(summary)
-
-# Sample input:
-# Huskies are a breed of dog known for their endurance, intelligence, and striking appearance. Originating from the harsh, cold climates of Siberia, these dogs were bred by the Chukchi people to pull sleds over long distances, making them an essential part of Arctic life. Their thick double coat provides insulation against extreme temperatures, while their almond-shaped eyes, which can be blue, brown, or even one of each, give them a distinctive and captivating look. Huskies are highly energetic and require a lot of exercise to stay happy and healthy. They have a playful and friendly nature, making them great companions, but their strong independent streak can make training a challenge. These dogs are known for their unique ability to vocalize in a variety of ways, from howling to "talking," which is their way of communicating with their owners. Despite their friendly disposition, huskies have a strong prey drive and may not be suitable for homes with small animals. They are also known for their remarkable problem-solving skills, often finding creative ways to escape from enclosures if not properly secured. Huskies thrive in colder climates, but with proper care, they can adapt to warmer environments as well. They are pack animals by nature, enjoying the company of other dogs and people. Regular grooming is essential to manage their shedding, especially during seasonal changes when they "blow" their coat. Proper nutrition, socialization, and consistent training are key to raising a well-behaved husky. Their history as sled dogs has made them popular in dog sports such as mushing, skijoring, and canicross. Huskies have a rich heritage and have been featured in many movies, books, and even rescue missions, showcasing their incredible abilities and unwavering loyalty to their human companions. If you're considering adding a husky to your family, it's important to be prepared for their high energy levels, need for companionship, and tendency to test boundaries. With the right care and environment, huskies can be a loving, loyal, and entertaining addition to any household.
+with open("summarization-input.txt", "r") as f:
+    text = f.read()
+    summarizer = pipeline("summarization")
+    summary = summarizer(text, min_length=200, max_length=300)
+    print(summary[0].get("summary_text"))
