@@ -1,0 +1,5 @@
+tensorflow
+tf-keras
+datasets
+evaluate
+transformers[sentencepiece]
