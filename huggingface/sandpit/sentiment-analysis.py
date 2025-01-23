@@ -2,9 +2,9 @@ from transformers import pipeline
 
 classifier = pipeline("sentiment-analysis")
 while True:
-	text = input("Enter a text to perform sentiment analysis on: ")
-	sentiment = classifier(text)
-	print(sentiment)
+    text = input("Enter a text to perform sentiment analysis on: ")
+    sentiment = classifier(text)
+    print(sentiment)
 
 # Some interesting results:
 
