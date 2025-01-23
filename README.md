@@ -9,7 +9,7 @@ Using a Python virtual environment:
 ### Create/Activate
 
 ```sh
-cd huggingface/sandpit
+cd huggingface
 virtualenv venv
 . venv/bin/activate
 ```
