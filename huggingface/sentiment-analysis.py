@@ -20,5 +20,5 @@ while True:
 # Pigeons fly often in my face
 # [{'label': 'NEGATIVE', 'score': 0.9815180897712708}
 
-# Pigeons fly often in my face displaying their rich plummage
-# [{'label': 'POSITIVE', 'score': 0.9767320156097412}]
+# Pigeons fly often in my face displaying their rich plumage
+# [{'label': 'POSITIVE', 'score': 0.9982560276985168}]
