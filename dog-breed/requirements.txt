@@ -1,0 +1,6 @@
+torch
+tf-keras
+datasets
+evaluate
+transformers[sentencepiece]
+Pillow
