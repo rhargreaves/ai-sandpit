@@ -1,4 +1,4 @@
-# LLM Sandpit
+# AI Sandpit
 
 Experiments with LLMs and the like
 
